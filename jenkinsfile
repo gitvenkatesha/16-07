@@ -11,7 +11,7 @@ pipeline {
                             
                             git clone https://github.com/jaintpharsha/maven.git
 
-                            ls -lrt
+                            cd mavan
 
                               '''
                          }
