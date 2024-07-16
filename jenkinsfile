@@ -8,12 +8,12 @@ pipeline {
      parameters {
                    booleanParam(name: 'checkout', defaultValue: true, description: 'Toggle this value')
                     booleanParam(name: 'build', defaultValue: false, description: 'Toggle this value')
-        
+                    booleanParam(name: 'test', defaultValue: true, description: 'Toggle this value')
      }
     stages {
         
          stage('checkout') {
-              agent{
+              agent {
             label slave_1
         }
 
@@ -29,7 +29,7 @@ pipeline {
             }
         }
         stage('build') {
-              agent{
+              agent {
             label slave_1
         }
 
@@ -40,7 +40,7 @@ pipeline {
             }
         }
         stage('test') {
-              agent{
+              agent {
             label slave_2
         }
 
