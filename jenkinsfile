@@ -10,9 +10,10 @@ pipeline {
      }
      parameters {
                    booleanParam(name: 'checkout', defaultValue: true, description: 'Toggle this value')
-                    booleanParam(name: 'build', defaultValue: false, description: 'Toggle this value')
                     booleanParam(name: 'test', defaultValue: true, description: 'Toggle this value')
-     }
+                    booleanParam(name: 'build', defaultValue: false, description: 'Toggle this value')
+                
+                       }
     stages {
         
          stage('checkout') {
