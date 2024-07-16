@@ -1,6 +1,10 @@
 pipeline {
     agent any 
-
+     environment {
+        TEST = "VALUE1"
+        TEST1 = "VALUE2"
+        TEST2 =  "VALUE3"
+     }
     stages {
 
         stage('checkout') {
@@ -9,13 +13,16 @@ pipeline {
             
 
                 sh '''
+
+                echo "$TEST"
                   echo "this checkout stage"
                   '''
             }
         }
         stage('build') {
             steps {
-                  
+                   echo "$TEST1"
+                    echo "$TEST2"
                   echo "this is buld stage check syntax"
             }
         }
