@@ -35,8 +35,8 @@ pipeline {
             steps {
                 sh '''
                 'sleep 10'
-                 touch golf.findText
-                 chmod 777 golf
+                 touch golf.txt
+                 chmod 777 golf.txt
                  ls -lrt
                  '''
             }
