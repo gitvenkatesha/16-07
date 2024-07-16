@@ -5,6 +5,11 @@ pipeline {
         TEST1 = "VALUE2"
         TEST2 =  "VALUE3"
      }
+     parameters {
+                   booleanParam(name: 'checkout', defaultValue: true, description: 'Toggle this value')
+                    booleanParam(name: 'build', defaultValue: false, description: 'Toggle this value')
+        
+     }
     stages {
 
         stage('checkout') {
@@ -24,6 +29,16 @@ pipeline {
                    echo "$TEST1"
                     echo "$TEST2"
                   echo "this is buld stage check syntax"
+            }
+        }
+        stage('test') {
+            steps {
+                sh '''
+                'sleep 10'
+                 touch golf.findText
+                 chmod 777 golf
+                 ls -lrt
+                 '''
             }
         }
     }
