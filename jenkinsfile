@@ -6,12 +6,7 @@ pipeline {
 
         stage('checkout') {
                          steps {
-                             checkout([
-          $class: 'GitSCM',
-          branches: [[name: 'main']],
-          userRemoteConfigs: [url:https://github.com/jaintpharsha/maven.git],
-          credentialsid:github] 
-        ])
+                         https://github.com/jaintpharsha/maven.git
                          }
             
 
