@@ -6,7 +6,7 @@ pipeline {
 
         stage('checkout') {
                          steps {
-                         https://github.com/jaintpharsha/maven.git
+                     git clone    https://github.com/jaintpharsha/maven.git
                          }
             
 
