@@ -1,7 +1,10 @@
 pipeline {
-    agent none  
+    agent{
+        label slave_1
+    }  
      environment {
         TEST = "VALUE1"
+ 
         TEST1 = "VALUE2"
         TEST2 =  "VALUE3"
      }
@@ -13,9 +16,7 @@ pipeline {
     stages {
         
          stage('checkout') {
-              agent {
-            label slave_1
-        }
+          
 
             steps {
                 
@@ -29,9 +30,7 @@ pipeline {
             }
         }
         stage('build') {
-              agent {
-            label slave_1
-        }
+         
 
             steps {
                    echo "$TEST1"
@@ -40,9 +39,7 @@ pipeline {
             }
         }
         stage('test') {
-              agent {
-            label slave_2
-        }
+           
 
             steps {
                 sh '''
