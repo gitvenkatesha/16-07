@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+
+    stages {
+
+        stage('checkout') {
+            stage {
+
+                sh '''
+                  echo "this checkout stage"
+                  '''
+            }
+        }
+    }
+}
