@@ -34,8 +34,11 @@ pipeline {
         stage('test') {
             steps {
                 sh '''
-                touch gcc.txt
+                touch  gcc.txt
+                 
+                 chmod 777 gcc.txt
 
+                 ls -lrt
       
 
                 '''
