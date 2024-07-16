@@ -4,7 +4,9 @@ pipeline {
     stages {
 
         stage('checkout') {
-            stage {
+            steps {
+                
+            
 
                 sh '''
                   echo "this checkout stage"
